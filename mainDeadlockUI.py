@@ -9,12 +9,10 @@ class ProcessUI:
         self.running = False
         self.progress = 0
 
-        # ===== Process State =====
         ttk.Label(root, text="Process State:").grid(row=0, column=0, sticky="w")
         self.state_var = tk.StringVar(value="Stopped")
         ttk.Label(root, textvariable=self.state_var).grid(row=0, column=1, sticky="w")
 
-        # ===== Resource Allocation =====
         ttk.Label(root, text="CPU Usage (%):").grid(row=1, column=0, sticky="w")
         self.cpu_var = tk.StringVar(value="0")
         ttk.Label(root, textvariable=self.cpu_var).grid(row=1, column=1, sticky="w")
@@ -23,11 +21,9 @@ class ProcessUI:
         self.mem_var = tk.StringVar(value="0")
         ttk.Label(root, textvariable=self.mem_var).grid(row=2, column=1, sticky="w")
 
-        # ===== Progress Bar =====
         self.progress_bar = ttk.Progressbar(root, length=200, maximum=100)
         self.progress_bar.grid(row=3, column=0, columnspan=2, pady=10)
 
-        # ===== Control Buttons =====
         ttk.Button(root, text="Start", command=self.start).grid(row=4, column=0, pady=5)
         ttk.Button(root, text="Pause", command=self.pause).grid(row=4, column=1, pady=5)
         ttk.Button(root, text="Reset", command=self.reset).grid(row=5, column=0, columnspan=2)
