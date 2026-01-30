@@ -66,7 +66,7 @@ def main():
     else:
         print("No deadlock detected.")
 
-    # 6️⃣ Chạy GUI
+    # Chạy GUI
     app = DeadlockVisualizer(core)
     app.run()
 
