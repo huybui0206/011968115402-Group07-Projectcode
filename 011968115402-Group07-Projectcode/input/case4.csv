@@ -1,0 +1,11 @@
+process,action,resource
+P1,request,R1
+P1,hold,R1
+
+P2,request,R1   
+
+P1,release,R1   
+
+P2,hold,R1      
+P2,release,R1
+#waitting khi chua co resource de hold

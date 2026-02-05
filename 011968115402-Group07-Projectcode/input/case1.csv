@@ -5,3 +5,4 @@ P1,hold,R1
 P2,hold,R2
 P1,request,R2
 P2,request,R1
+#co deadlock
